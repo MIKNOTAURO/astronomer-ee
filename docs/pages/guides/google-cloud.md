@@ -143,7 +143,10 @@ kubectl create secret tls ${CLUSTER_NAME}-tls --key domain.key --cert domain.crt
 You can name the secret whatever you want. Just make sure to update the `global.tlsSecret` value in your `config.yaml` if you change it.
 
 #### Let's Encrypt
-*Note: We highly recommend using a wildcard certificate for production usage *
+
+<!-- markdownlint-disable MD036 -->
+*Note: We highly recommend using a wildcard certificate for production usage.*
+<!-- markdownlint-enable MD036 -->
 
 If you do not already have a valid certificate, and do not want to purchase one, you can use the free service, [Let's Encrypt](https://letsencrypt.org/){:target="_blank"}. [Kube-lego](https://github.com/jetstack/kube-lego){:target="_blank"} is a project that you can deploy into your cluster that will take care of registering with Let's Encrypt and populating the secret with a TLS certificate for you. You can deploy it using the following command:
 
