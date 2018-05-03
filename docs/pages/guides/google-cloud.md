@@ -16,7 +16,7 @@ Install Astronomer Enterprise Edition and a single deployment of our Airflow mod
 Initial requirements are:
 
 * A live [Kubernetes](https://kubernetes.io/){:target="_blank"} cluster with [Helm (Tiller)](https://github.com/kubernetes/helm){:target="_blank"} installed
-* Databases (Postgres & Redis)
+* Databases (PostgreSQL & Redis)
 * A clone of the [Astronomer Platform Helm charts](https://github.com/astronomerio/helm.astronomer.io){:target="_blank"}
 
 If you don't have Kubernetes installed already, no fear, it's not too hard to [get Kubernetes Running](https://cloud.google.com/kubernetes-engine/docs/quickstart){:target="_blank"}. If you're just getting started, you can probably get away with a single node cluster, and increase the count over time. Think about how your workload might increase over time and choose a node size that makes sense for your plans. You can't change the node type after a cluster is already created, but you can add additional node pools that have different types of nodes.
@@ -97,7 +97,7 @@ The Astronomer Platform requires several secrets to be in place before installat
 
 ### Connection Strings
 
-All connection strings should be created with a `connection` key that contains the actual connection string. Postgres is required for the relational data, and we typically recommend Redis for the Celery task queue. You'll need to ensure that the databases specified here exist prior to deployment.
+All connection strings should be created with a `connection` key that contains the actual connection string. PostgreSQL is required for the relational data, and we typically recommend Redis for the Celery task queue. You'll need to ensure that the databases specified here exist prior to deployment.
 
 In these docs, we make an assumption on the database name, but you are free to change them to whatever you want, assuming two secret don't share the same database name.
 
@@ -110,20 +110,20 @@ Also, don't forget to switch your `kubectl` default context to the namespace you
 
 Below we'll assume your PostgreSQL is running on port 5432, and Redis on 6379.
 
-First, let's create a Postgres secret for the houston database, houston being the core API of Astronomer.
+First, let's create a PostgreSQL secret for the houston database, houston being the core API of Astronomer.
 
 ```bash
 kubectl create secret generic houston-database --from-literal connection='postgresql://username:password@host:5432/houston' --namespace ${NAMESPACE}
 ```
 
-Now, let's create the Postgres secret for Airflow deployments
+Now, let's create the PostgreSQL secret for Airflow deployments
 
 ```bash
 kubectl create secret generic airflow-database --from-literal connection='postgresql://username:password@host:5432/airflow' --namespace ${NAMESPACE}
 ```
 
 Finally, let's create a secret for the Airflow task queue broker. Note that if you are using redis, the database name is an integer between 0 and 15.
-
+ 
 ```bash
 kubectl create secret generic airflow-redis --from-literal connection='redis://:password@host:6379/0' --namespace ${NAMESPACE}
 ```
