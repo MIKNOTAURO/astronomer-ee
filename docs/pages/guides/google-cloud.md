@@ -44,9 +44,6 @@ If you aren't sure about the `PROJECT_ID`, you can list your GCP projects with
 ```bash
 gcloud projects list
 ```
-
-Create a static IP address with the following command:
-
 ## Configuration File
 
 Once you have cloned the helm repository, change into that directory. The helm charts are built to be customizable and tailored to your unique environment. The way we customize an installation is through a YAML configuration file. This file can contain global configurations that are used in multiple charts, or chart specific configurations. Global configurations are underneath the top-level `global` key. Chart specific configurations will be nested under top-level keys that correspond to the chart name. For example, to override values in the `airflow` chart, you will need to create a top-level key, `airflow`, and nest configurations under it.
@@ -117,6 +114,10 @@ kubectl create secret generic houston-database --from-literal connection='postgr
 ```
 
 Now, let's create the PostgreSQL secret for Airflow deployments
+
+<!-- markdownlint-disable MD036 -->
+*Note: The database user must have permissions to create new databases, schemas, and users *
+<!-- markdownlint-enable MD036 -->
 
 ```bash
 kubectl create secret generic airflow-database --from-literal connection='postgresql://username:password@host:5432/airflow' --namespace ${NAMESPACE}
