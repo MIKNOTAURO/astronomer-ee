@@ -24,3 +24,7 @@ Usage:
 Customization:
 
 - [Configuring Airflow](/guides/configuring-airflow)
+
+Misc:
+
+- [Build the Docs](/guides/build-docs/)
