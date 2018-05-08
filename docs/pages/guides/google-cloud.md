@@ -61,7 +61,7 @@ You now have a file named `config.yaml` where you can make any configuration cha
 Although this is not a strict requirement, we typically recommend that you create an isolated namespace for the Astronomer Platform to live inside.
 
 ```bash
-kubectl create namespace astronomer
+kubectl create namespace ${NAMESPACE}
 ```
 
 ## DNS
