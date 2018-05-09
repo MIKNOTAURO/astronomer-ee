@@ -220,11 +220,7 @@ If you recieve any weird errors from helm, you may need to give Tiller access to
 
 ## Upgrade
 
-To roll out an upgrade to an existing release:
-
-```bash
-helm upgrade -f config.yaml --namespace ${NAMESPACE} <release name> .
-```
+To upgrade an Astronomer install, please see [Upgrade Astronomer](/guides/upgrade/).
 
 ## Test
 

@@ -10,6 +10,7 @@ Production:
 
 - [Google Cloud Platform](/guides/google-cloud)
 - [AWS](/guides/aws)
+- [Upgrade Astronomer](/guides/upgrade)
 
 Dev:
 
@@ -24,3 +25,7 @@ Usage:
 Customization:
 
 - [Configuring Airflow](/guides/configuring-airflow)
+
+Misc:
+
+- [Build the Docs](/guides/build-docs/)
