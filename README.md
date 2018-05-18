@@ -12,7 +12,3 @@ Related links:
   * [Astronomer CLI](https://github.com/astronomerio/astro-cli)
   * [Commander](https://github.com/astronomerio/commander)
   * [Docker images for modules](https://github.com/astronomerio/astronomer)
-* Clickstream
-  * [Event API](https://github.com/astronomerio/event-api)
-  * [Event Router](https://github.com/astronomerio/event-router)
-  * [Event Forwarder](https://github.com/astronomerio/event-forwarder)
