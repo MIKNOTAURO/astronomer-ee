@@ -19,7 +19,7 @@ running pipelines.
 The platform leverages leading open source tools
 including Kubernetes, Airflow, Prometheus, and Grafana — and also
 includes a library of
-[open-source Airflow connectors](https://github.com/airflow-plugins){:target="_blank"}
+[open-source Airflow connectors](https://github.com/airflow-plugins)
 that we have been building and curating for the past year.
 
 <iframe width="560" height="315" style="display: block; margin: 4rem auto;"
@@ -36,7 +36,7 @@ your own Postgres and Redis database.
 ![Airflow Module]({{ "/assets/img/airflow_module.png" | absolute_url }})
 
 This kit is fully open-sourced (Apache 2.0) and you can experiment with it at
-[https://open.astronomer.io/airflow/](https://open.astronomer.io/airflow/){:target="_blank"}.
+[https://open.astronomer.io/airflow/](https://open.astronomer.io/airflow/).
 
 ## DAG Deployment
 
@@ -46,8 +46,8 @@ CLI to deploy DAGs through a private Docker registry that interacts
 with the Kubernetes API.
 
 Components that glue this all together include
-[Phoenix](https://github.com/astronomerio/phoenix){:target="_blank"} and
-[Commander](https://github.com/astronomerio/commander){:target="_blank"}.
+[Phoenix](https://github.com/astronomerio/phoenix) and
+[Commander](https://github.com/astronomerio/commander).
 
 ![Airflow Deployment]({{ "/assets/img/airflow_deployment.png" | absolute_url }})
 
@@ -60,9 +60,9 @@ Additional [RUN](https://docs.docker.com/engine/reference/builder/#run
 
 ## Astronomer CLI
 
-The [Astronomer CLI](https://github.com/astronomerio/astro-cli){:target="_blank"} is
+The [Astronomer CLI](https://github.com/astronomerio/astro-cli) is
 under very active development to
-[support Airflow-related commands](https://github.com/astronomerio/astro-cli/blob/master/cmd/airflow.go){:target="_blank"}.
+[support Airflow-related commands](https://github.com/astronomerio/astro-cli/blob/master/cmd/airflow.go).
 
 ## Airflow CLI
 
@@ -73,9 +73,9 @@ cloud Airflow).
 ## Other community contributions
 
 We’re building out a
-[library of Airflow Plugins](https://github.com/airflow-plugins){:target="_blank"}
+[library of Airflow Plugins](https://github.com/airflow-plugins)
 and we’re also doing an
-[Airflow podcast](soundcloud.com/the-airflow-podcast){:target="_blank"}.
+[Airflow podcast](soundcloud.com/the-airflow-podcast).
 
 ## Building the Documentation
 
