@@ -45,41 +45,9 @@ development at least.
 1. Verify by running `helm ls` to see the status of your deployment
 
 ## Astronomer Deployment
-
-Update `config.yaml` to point to the Redis and
-PostgreSQL pods you just deployed:
-
-    - Configuration depending on PostgreSQL
-        - `data.metadata`
-        - `data.results`
-        - `data.grafata`
-    - Configuration depending on Redis
-        - `data.broker`
-
-Below are example configurations with local dev defaults being denoted by a *
-
-```yaml
-results:
-    host: intentional-marmot-postgresql
-    port: 5432*
-    database: airflow
-    username: postgres*
-    password: password
-```
-
-```yaml
-results:
-    host: braided-alpaca-redis
-    port: 6379*
-    database: 0*
-    username: ''*
-    password: password
-```
+Use the password that is output by the previous installs to construct connection strings needed to deploy the platform.
 
 Note: If deploying a database in a separate Kubernetes namespace, you'll need to use fully qualified URLs for the PostgreSQL and/or Redis host. For example, `intentional-marmot-postgresql` would become `intentional-marmot-postgresql.default.svc.cluster.local` where `default` is the database's Kubernetes namespace.
-
-Then, to deploy Astronomer, run
-`helm install --name=astro-prod --namespace=astronomer -f config.yaml astronomer`
 
 ## Verification
 
