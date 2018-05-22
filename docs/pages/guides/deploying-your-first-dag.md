@@ -5,8 +5,6 @@ permalink: /guides/deploying-your-first-dag/
 hide: true
 ---
 
-
-
 # Objective
 You have created and tested your Airflow DAG locally via the [astro-cli](https://github.com/astronomerio/astro-cli){:target="_blank"}. This guide will show you how to deploy a DAG to your Astronomer EE cluster.
 
@@ -18,7 +16,6 @@ Guide requirements are
 
 ## Authenticating With Your Registry
 The first setting we need to configure is the location of your private Docker registry. This houses all Docker images pushed to your Astronomer EE deploy. By default it is located at `registry.[baseDomain]`. If you are unsure about which domain you deployed Astronomer EE to, you can refer back to the `baseDomain` in your [`config.yaml`](http://enterprise.astronomer.io/guides/google-cloud/index.html#configuration-file).
->>>>>>> master
 
 Run the following command from your project root directory...
 ```bash
