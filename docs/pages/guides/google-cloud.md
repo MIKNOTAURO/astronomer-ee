@@ -30,14 +30,18 @@ Private clusters is currently a beta feature on Google Kubernetes Engine (GKE) t
 To complete this installation guide, you will need to have Kubernetes Admin and Compute Admin roles in GCP. You need permission to create a cluster, as well as provision a static IP address.
 
 ## Pre setup
-We're going to set some local environment variables to ease the rest of the process, customize as needed:
+We're going to set some local environment variables to ease the rest of the process
+
+Copy the following and customize as needed.
 ```bash
 export CLUSTER_NAME=my-cluster
 export GKE_REGION=us-east4
 export PROJECT_ID=gcp-project-id
 export YOUR_DOMAIN=astronomer.yourdomain.com
-export YOUR_EMAIL_ADDRESS=you@yourdomain.com
+export YOUR_EMAIL=you@yourdomain.com
 export NAMESPACE=astronomer
+export USERNAME=admin
+export PASSWORD=admin
 ```
 
 If you aren't sure about the `PROJECT_ID`, you can list your GCP projects with
@@ -82,7 +86,7 @@ To view the newly created IP address run this command:
 gcloud compute addresses describe ${CLUSTER_NAME}-external-ip --region ${GKE_REGION} --project ${PROJECT_ID} --format='value(address)'
 ```
 
-Copy this value and populate `global.loadBalancerIP` in your `config.yaml` file.
+Copy this value and populate `nginx.loadBalancerIP` in your `config.yaml` file.
 
 Now that you have a static IP address, you'll need to set up your DNS nameserver with some entries. Depending on your set up you can do one of two things here. You can either set up a wildcard A record or create individual A records for each subdomain. If nothing else is running on the domain you choose, you can quickly and easily set up a wildcard A record to point to your IP address. If you already have other services running on your domain, you can create individual records for the various services. You can create A records for any or all of the following subdomains: `registry.yourdomain`, `airflow.yourdomain`, `flower.yourdomain`, `prometheus.yourdomain`, and `grafana.yourdomain`.
 
@@ -109,21 +113,15 @@ Below we'll assume your PostgreSQL is running on port 5432, and Redis on 6379.
 
 First, let's create a PostgreSQL secret for the houston database, houston being the core API of Astronomer.
 
+<!-- markdownlint-disable MD036 -->
+*Note: The database user configured must have permissions to create new databases, schemas, and users.*
+<!-- markdownlint-enable MD036 -->
+
 ```bash
 kubectl create secret generic houston-database --from-literal connection='postgresql://username:password@host:5432/houston' --namespace ${NAMESPACE}
 ```
 
-Now, let's create the PostgreSQL secret for Airflow deployments
-
-<!-- markdownlint-disable MD036 -->
-*Note: The database user must have permissions to create new databases, schemas, and users *
-<!-- markdownlint-enable MD036 -->
-
-```bash
-kubectl create secret generic airflow-database --from-literal connection='postgresql://username:password@host:5432/airflow' --namespace ${NAMESPACE}
-```
-
-Finally, let's create a secret for the Airflow task queue broker. Note that if you are using redis, the database name is an integer between 0 and 15.
+And now let's create a secret for the Airflow task queue broker. Note that if you are using redis, the database name is an integer between 0 and 15 (15 being the max by default).
  
 ```bash
 kubectl create secret generic airflow-redis --from-literal connection='redis://:password@host:6379/0' --namespace ${NAMESPACE}
@@ -153,12 +151,12 @@ If you do not already have a valid certificate, and do not want to purchase one,
 
 ```bash
 helm install \
---set=config.LEGO_EMAIL=${YOUR_EMAIL_ADDRESS} \
+--set=config.LEGO_EMAIL=${YOUR_EMAIL} \
 --set=config.LEGO_URL="https://acme-v01.api.letsencrypt.org/directory" \
 --set=config.LEGO_LOG_LEVEL=debug \
 --set=rbac.create=true \
 --set=image.tag=canary \
---namespace=astronomer \
+--namespace=${NAMESPACE} \
 stable/kube-lego
 ```
 
@@ -199,15 +197,6 @@ Now, we need to create a secret to give Kubernetes access to pull images from th
 kubectl create secret docker-registry registry-auth --docker-server registry.${YOUR_DOMAIN} --docker-username ${USERNAME} --docker-password ${PASSWORD} --docker-email ${YOUR_EMAIL} --namespace ${NAMESPACE}
 ```
 
-Finally, in preparation for an authentication system, we need to create a passphrase for encrypting JWTs.
-
-```bash
-# Generate random string
-RANDOM_STRING=$(head /dev/urandom | env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
-kubectl create secret generic houston-jwt-passphrase --from-literal passphrase=${RANDOM_STRING} --namespace ${NAMESPACE}
-```
-
-
 ## Installation
 
 Now that we have everything in place, we can deploy the Astronomer Platform to your cluster. All you need to do is run `helm install`, and specify your configuration file.
@@ -226,10 +215,7 @@ To upgrade an Astronomer install, please see [Upgrade Astronomer](/guides/upgrad
 
 If everything went according to plan, you should be able to check the following URL's in your browser:
 
-* <https://airflow.yourdomain>
-* <https://flower.yourdomain>
-* <https://prometheus.yourdomain>
-* <https://grafana.yourdomain>
+* <https://houston.yourdomain/healthz>
 * <https://registry.yourdomain/v2/_catalog>
 
 ## CLI Install
