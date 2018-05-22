@@ -36,7 +36,7 @@ your own Postgres and Redis database.
 ![Airflow Module]({{ "/assets/img/airflow_module.png" | absolute_url }})
 
 This kit is fully open-sourced (Apache 2.0) and you can experiment with it at
-[https://open.astronomer.io/airflow/](https://open.astronomer.io/airflow/).
+[https://open.astronomer.io/](https://open.astronomer.io/).
 
 ## DAG Deployment
 
