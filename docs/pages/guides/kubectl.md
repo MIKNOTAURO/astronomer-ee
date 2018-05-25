@@ -5,9 +5,6 @@ permalink: /guides/kubectl/
 hide: true
 ---
 
-# Kubectl
-
-If not already, you'll need to install the Kubernetes command-line tool to complete the Astronomer EE installation process.
 
 ## Installation
 
@@ -48,3 +45,6 @@ Add the binary to your environment PATH and you're all set.
 
 For more installation options, visit the official Kubectl install guide:[https://kubernetes.io/docs/tasks/tools/install-kubectl/](https://kubernetes.io/docs/tasks/tools/install-kubectl/){:target="_blank"} 
 
+### MiniKube
+
+With Kubectl installed, you're ready to move on to [Installing MiniKube](/guides/minikube/) to run your own kubernetes instance locally.

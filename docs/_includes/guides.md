@@ -4,7 +4,8 @@ Prep:
 
 - [Helm Installation](/guides/helm)
 - [Databases](/guides/databases)
-- [Migrating DAGs](/guides/migrating-dags)
+- [Kubectl](/guides/kubectl)
+
 
 Production:
 
@@ -21,6 +22,7 @@ Usage:
 
 - [Setting Up An Airflow Project](/guides/creating-an-airflow-project/)
 - [Deploying Your First DAG](/guides/deploying-your-first-dag/)
+- [Migrating DAGs](/guides/migrating-dags)
 
 Customization:
 
