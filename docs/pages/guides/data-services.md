@@ -47,7 +47,7 @@ development at least.
 ## Astronomer Deployment
 Use the password that is output by the previous installs to construct connection strings needed to deploy the platform.
 
-Note: If deploying a database in a separate Kubernetes namespace, you'll need to use fully qualified URLs for the PostgreSQL and/or Redis host. For example, `intentional-marmot-postgresql` would become `intentional-marmot-postgresql.default.svc.cluster.local` where `default` is the database's Kubernetes namespace.
+Note: If deploying a database in a separate Kubernetes namespace, you'll need to use fully qualified URLs for the PostgreSQL and/or Redis host. For example, `intentional-marmot-postgresql` would become `intentional-marmot-postgresql.default.svc.cluster.local` where `default` is the database's Kubernetes namespace. Make sure you use the master URL for your Redis database connection, `clever-puma-redis` would be `clever-puma-redis-master` and if deploying in another namespace the full url would be `clever-puma-redis-master.default.svc.cluster.local`
 
 ## Verification
 
