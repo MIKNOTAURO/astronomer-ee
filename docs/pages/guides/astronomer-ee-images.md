@@ -39,7 +39,6 @@ ONBUILD RUN pip install --no-cache-dir -q -r requirements.txt
 
 ## Customizing Your Images
 
-**TODO discuss exact ordering of requirements install**
 It is important that a user is able to customize their Airflow instance as needed. There are several entry points for doing so depending on specific needs and familiarity with Docker. Here we will discuss these options in order of least difficult and least flexible to most difficult and most flexible.
 
 ### Customizing Basic Project Dependencies
