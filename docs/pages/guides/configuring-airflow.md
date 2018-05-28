@@ -7,7 +7,7 @@ hide: true
 
 ## Objective
 
-Configure Airflow specific settings via Helm charts and Kubernetes Secrets.
+Configure Airflow specific settings via Helm charts and Kubernetes Secrets or modification of your Airflow image `Dockerfile`.
 
 ## Prerequisites
 
@@ -115,3 +115,5 @@ Once inside of your Airflow webserver pod's shell you can check ENVs configured 
 printenv
 ```
 
+## Airflow Configuration via Dockerfile
+Depending on your specific permissions to your Kubernetes cluster, it may not always be possible to modify and deploy the Helm Charts. In this case you can modify the `Dockerfile` which is created in your project root when when you run `astro airflow init` from the [astro-cli](https://github.com/astronomerio/astro-cli). When running your Airflow project locally, this has the benefit of allowing you modify and test Airflow configuration changes that you could not test without a deployment to your cluster. When deploying your Airflow project to the cluster this method gives you the ability to set project level (as opposed to cluster level) configurations.
