@@ -5,15 +5,6 @@ permalink: /roadmap.html
 order: 3
 ---
 
-## Ongoing
-
-Improvements to:
-
-* User experience & documentation
-* [Airflow Guides](https://www.astronomer.io/guides/)
-* [Airflow Plugins](https://github.com/airflow-plugins)
-* [Airflow Podcast](https://soundcloud.com/the-airflow-podcast)
-
 ## Release 0.3 (~June 2018)
 
 * CLI
