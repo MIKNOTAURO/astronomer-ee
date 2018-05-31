@@ -2,9 +2,7 @@
 layout: page
 title: Guides
 permalink: /guides/
-order: 1
+order: 2
 ---
-
-
 
 {% include guides.md %}

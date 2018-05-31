@@ -56,9 +56,11 @@
   font-family: 'Sofia Regular', 'Open Sans', Helvetica, Arial, sans-serif;
   background-color: #302c43;
   background-image: url(/assets/img/stars-bg.png);
-  background-size: 20%;
+  background-size: 80%;
   background-repeat: repeat;
   text-align: center;
+  margin-bottom: 40px;
+
 }
 
 #jumbotron-header .container {
@@ -90,12 +92,13 @@ p, h1, h2, h3, li, a, ul, .licensing, .back-to-top {
 a {
   color: #44959B;
 }
-footer a {
-    color: #302C43 !important;
+footer p, .bs-docs-footer-links {
+  margin-top: 5px;
 }
+
 body {
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.6;
 }
 code {
   color: #E79637;
@@ -104,8 +107,8 @@ a.btn-outline-inverse {
   color: #FFF;
   border-color: #FFF;
 }
-.bs-docs-masthead .version {
-  color: #FFF;
+.version {
+  color: #FFF !important;
 }
 
 .licensing {
@@ -114,7 +117,7 @@ a.btn-outline-inverse {
   color: #2F2D41;
   font-style: italic;
   padding: 20px;
-  margin: 10px 0 10px;
+  margin: 20px 0 10px;
 }
 
 .highlighter-rouge > .highlight > button {
@@ -131,8 +134,24 @@ a.btn-outline-inverse {
 
 p, h1, h2, h3, h4, h5, h6 {
   color: #302c43;
+  margin-top: 25px;
 }
 
 html {
   background-color: #fefcf9;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+  margin: 50px 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
