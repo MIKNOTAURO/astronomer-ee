@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Features
-permalink: /features
+permalink: /features.html
 order: 1
 ---
 

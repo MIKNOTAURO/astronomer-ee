@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Roadmap
-permalink: /roadmap
+permalink: /roadmap.html
 order: 3
 ---
 
