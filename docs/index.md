@@ -21,9 +21,9 @@ into the task of creating, deploying and managing data workflows.
 Watch video below to see the platform in action:
 
 <div class="videoWrapper">
-    <iframe
-      src="https://www.youtube.com/embed/J-qIzADJlV8"
-      frameborder="0" allow="autoplay; encrypted-media"
+  <iframe
+    src="https://www.youtube.com/embed/J-qIzADJlV8"
+    frameborder="0" allow="autoplay; encrypted-media"
     allowfullscreen></iframe>
 </div>
 
@@ -32,20 +32,3 @@ Watch video below to see the platform in action:
 * [Airflow Guides](https://www.astronomer.io/guides/)
 * [Airflow Plugins](https://github.com/airflow-plugins)
 * [Airflow Podcast](soundcloud.com/the-airflow-podcast)
-
-## Building Docs
-
-Documentation is built on Jekyll and hosted on Google Cloud Storage.
-
-Build the docs site locally:
-
-```
-cd docs
-bundle install
-```
-
-Run it:
-
-```
-bundle exec jekyll serve
-```
