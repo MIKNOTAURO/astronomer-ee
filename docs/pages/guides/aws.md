@@ -9,7 +9,7 @@ hide: true
 For information about getting started with EKS, see the [https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html](AWS Getting Started Guide)
 
 ## In this guide we'll cover:
-- [Setting up the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) * Optional *
+- [Setting up the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) (Optional)
 - [Setting up Kubectl](/guides/kubectl/)
 - [Setting up Heptio Authenticator](https://github.com/heptio/authenticator)
 - [Setting up Helm and Tiller](/guides/helm/)
@@ -19,10 +19,19 @@ For information about getting started with EKS, see the [https://docs.aws.amazon
 ## Getting started
 
 Make sure you have correctly installed the following tools, and can run a test command for each:
-- Helm: `helm version` Output: `Client: &version.Version{SemVer:"v2.9.1", GitCommit:"20adb27c7c5868466912eebdf6664e7390ebe710", GitTreeState:"clean"}`
-- AWS CLI: `aws -version` Output: `Client: &version.Version{SemVer:"v2.9.1", GitCommit:"20adb27c7c5868466912eebdf6664e7390ebe710", GitTreeState:"clean"}`
-- Kubectl: `kubectl version` Output: `Client Version: version.Info{Major:"1", Minor:"10", GitVersion:"v1.10.3", GitCommit:"2bba0127d85d5a46ab4b778548be28623b32d0b0", GitTreeState:"clean", BuildDate:"2018-05-21T09:17:39Z"`
-- Heptio: `heptio-authenticator-aws help` Output: `A tool to authenticate to Kubernetes using AWS IAM credentials...`
+
++ Helm: `helm version`
+    - Output: `Client: &version.Version{SemVer:"v2.9.1", GitCommit:"20adb27c7c5868466912eebdf6664e7390ebe710", GitTreeState:"clean"}`
+
++ AWS CLI: `aws -version`
+    - Output: `Client: &version.Version{SemVer:"v2.9.1", GitCommit:"20adb27c7c5868466912eebdf6664e7390ebe710", GitTreeState:"clean"}`
+
++ Kubectl: `kubectl version` 
+    - Output: `Client Version: version.Info{Major:"1", Minor:"10", GitVersion:"v1.10.3", GitCommit:"2bba0127d85d5a46ab4b778548be28623b32d0b0", GitTreeState:"clean", BuildDate:"2018-05-21T09:17:39Z"`
+
++ Heptio: `heptio-authenticator-aws help` 
+    - Output: `A tool to authenticate to Kubernetes using AWS IAM credentials...`
+
 - An AWS VPC. You can setup a custom VPC, or use the provided AWS template to get started. See the VPC setup guide in the [EKS Getting Started Docs](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html)
 
 ## Create IAM Role
