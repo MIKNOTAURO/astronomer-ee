@@ -10,6 +10,7 @@ hide: true
 # Helm
 
 To install the Astronomer Platform, you will need to also have `helm` and it's deployment service `tiller` installed. If you are already using `helm`, you can skip this step.
+To install Helm and Tiller, see the [Kubernetes Helm Install Guide](https://github.com/kubernetes/helm/blob/master/docs/install.md)
 
 ## Intialize Helm
 

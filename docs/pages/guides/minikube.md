@@ -36,7 +36,8 @@ In terminal run `brew cask install minikube`
 * [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads)
 * [KVM](https://www.linux.com/learn/intro-to-linux/2017/5/creating-virtual-machines-kvm-part-1)
 
-In terminal run `curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/`
+In terminal run:
+ `curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/`
 
 This command will install the latest version of MiniKube and add a PATH for minikube.
 
