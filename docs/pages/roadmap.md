@@ -75,3 +75,4 @@ order: 3
 * Audit Logging. Collect audit logs, present in UI.
 * Platform usage metrics. Present trends for daily DAGs, tasks, user engagement in UI.
 * Airflow package manager. Provide command line interface to bring in plugins.
+* Astronomer Kubernetes Operator
