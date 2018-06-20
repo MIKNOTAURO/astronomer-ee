@@ -76,3 +76,4 @@ order: 3
 * Platform usage metrics. Present trends for daily DAGs, tasks, user engagement in UI.
 * Airflow package manager. Provide command line interface to bring in plugins.
 * Astronomer Kubernetes Operator
+* Improvements to Airflow UI (it should update in real time)
