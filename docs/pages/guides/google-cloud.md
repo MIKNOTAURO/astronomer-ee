@@ -94,7 +94,7 @@ gcloud compute addresses describe ${CLUSTER_NAME}-external-ip --region ${GKE_REG
 
 Copy this value and populate `nginx.loadBalancerIP` in your `config.yaml` file.
 
-Now that you have a static IP address, you'll need to set up your DNS nameserver with some entries. Depending on your set up you can do one of two things here. You can either set up a wildcard A record or create individual A records for each subdomain. If nothing else is running on the domain you choose, you can quickly and easily set up a wildcard A record to point to your IP address. If you already have other services running on your domain, you can create individual records for the various services. You can create A records for any or all of the following subdomains: `registry.yourdomain`, `airflow.yourdomain`, `flower.yourdomain`, `prometheus.yourdomain`, and `grafana.yourdomain`.
+Now that you have a static IP address, you'll need to set up your DNS nameserver with some entries. You will need to set up a wildcard A Record. The wildcard can be on your root domain, or on a subdomain.  The consistent sub domains used by our platform are: `registry.yourdomain`, `airflow.yourdomain`, `flower.yourdomain`, `prometheus.yourdomain`, and `grafana.yourdomain`.  As long as there are no conflicts with these subdomains, there shouldn't be a problem creating a wildcard subdomain with other existing subdomains. When you create airflow deployments, we'll create subdomains such as `airflow-solar-apogee-5832`.
 
 Once you've chosen the domain where you will be hosting the services, update `global.baseDomain` in your `config.yaml`. For example, if you entered `mycompany.io` as the `baseDomain`, your airflow UI will be available at `airflow.mycompany.io`.
 
