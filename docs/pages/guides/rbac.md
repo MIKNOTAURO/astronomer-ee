@@ -43,3 +43,7 @@ The lowest level of our model is the permissions center around objects and
 actions, for example: `user.delete`, `team.create`, `deployment.list`.
 
 [Full list](https://github.com/astronomerio/houston-api/src/database/migrations/20180619163410_rbac_seed.js)
+
+## Example
+
+![RBAC Example]({{ "/assets/img/rbac_example.png" | absolute_url }})
