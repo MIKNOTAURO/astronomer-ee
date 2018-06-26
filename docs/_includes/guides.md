@@ -30,4 +30,5 @@ Customization:
 
 Misc:
 
+- [RBAC System](/guides/rbac/)
 - [Build the Docs](/guides/build-docs/)
