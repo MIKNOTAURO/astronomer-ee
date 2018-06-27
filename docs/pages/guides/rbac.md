@@ -25,10 +25,10 @@ to define a user's access to a team and group of deployments, i.e.
 `owner`, `admin`, `user`. These are customizable for each Astronomer deployment
 as global options, and also definable on a team basis.
 
-### Teams
+### Workspaces
 
-Teams contain a group of Airflow Cluster Deployments, and are also linked
-to a group of users with designated roles.
+Workspaces contain a group of Airflow Cluster Deployments. The creator of the
+workspace can invite other users into it.
 
 ## Advanced Features
 
