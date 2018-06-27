@@ -7,4 +7,23 @@ hide: true
 
 # Monitoring
 
-TODO
+TODO: expand from telemetry feature notes
+
+## Introduction
+### Monitoring in Airflow vs Astronomer?
+### Components
+
+## Getting Started
+
+## Airflow
+### StatsD
+### statsd\_exporter
+
+## Astronomer
+### Telemetry
+### Prometheus
+### Grafana
+
+## Customization
+
+## References
