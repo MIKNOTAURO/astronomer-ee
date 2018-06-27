@@ -1,37 +1,37 @@
 ## Guides
 
-Prep:
+Prep
 
 - [Helm Installation](/guides/helm)
 - [Databases](/guides/databases)
 - [Kubectl](/guides/kubectl)
 
-Production:
+Production
 
 - [Google Cloud Platform](/guides/google-cloud)
 - [AWS](/guides/aws)
 - [Upgrade Astronomer](/guides/upgrade)
 
-Dev:
+Dev
 
 - [Docker for Mac](/guides/docker-for-mac)
 - [Minikube](/guides/minikube)
 
-Usage:
+Usage
 
 - [Setting Up An Airflow Project](/guides/creating-an-airflow-project/)
 - [Deploying Your First DAG](/guides/deploying-your-first-dag/)
 - [Migrating DAGs](/guides/migrating-dags)
 
-Monitoring:
+Monitoring
 
 - [Monitoring](/guides/monitoring)
 
-Customization:
+Customization
 
 - [Configuring Airflow](/guides/configuring-airflow)
 
-Misc:
+Misc
 
 - [RBAC System](/guides/rbac/)
 - [Build the Docs](/guides/build-docs/)
