@@ -6,7 +6,6 @@ Prep:
 - [Databases](/guides/databases)
 - [Kubectl](/guides/kubectl)
 
-
 Production:
 
 - [Google Cloud Platform](/guides/google-cloud)
@@ -23,6 +22,10 @@ Usage:
 - [Setting Up An Airflow Project](/guides/creating-an-airflow-project/)
 - [Deploying Your First DAG](/guides/deploying-your-first-dag/)
 - [Migrating DAGs](/guides/migrating-dags)
+
+Monitoring:
+
+- [Monitoring](/guides/monitoring)
 
 Customization:
 
