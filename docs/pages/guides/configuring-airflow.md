@@ -127,3 +127,7 @@ printenv
 ## Airflow Configuration via Dockerfile
 
 Depending on your specific permissions to your Kubernetes cluster, it may not always be possible to modify and deploy the Helm Charts. In this case you can modify the `Dockerfile` which is created in your project root when when you run `astro airflow init` from the [astro-cli](https://github.com/astronomerio/astro-cli). When running your Airflow project locally, this has the benefit of allowing you modify and test Airflow configuration changes that you could not test without a deployment to your cluster. When deploying your Airflow project to the cluster this method gives you the ability to set project level (as opposed to cluster level) configurations.
+
+## Airflow Configuration via Airflow.cfg
+
+One other way to supply defaults is to provide your own [airflow.cfg](https://github.com/apache/incubator-airflow/blob/master/airflow/config_templates/default_airflow.cfg). This will allow you to provide a default configuration to your Airflow instance without specifying any environment variables. To do this, place an `airflow.cfg` tied to your current version of Airflow in your Astronomer project directory. This file will be injected into your image at build time. Please note that any configurations passed in through the  `airflow.cfg` will be overwritten by ENVs passed in via a `Dockerfile` or Helm charts.
