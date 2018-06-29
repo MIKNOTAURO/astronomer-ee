@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Deploying Your First DAG to Astronomer Enterprise
+title: Deploying DAGs with Astro CLI
 permalink: /guides/deploying-dags-with-astro-cli/
 hide: true
 ---
