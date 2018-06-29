@@ -48,10 +48,10 @@ NOTE: It's probably best to download the CLI in your CI build as
 the registry is currently password protected, and will eventually
 have checks if the user has permission to deploy.
 
-```
-astro auth login -d {their domain}
+```bash
+astro auth login -d {domain}
 astro airflow deploy {release_name}
 ```
 
-Where {their domain} is your base domain, and {release_name} is
+Where {domain} is your base domain, and {release_name} is
 your kubernetes release name. The CLI will handle the rest.
