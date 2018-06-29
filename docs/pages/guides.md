@@ -26,6 +26,7 @@ order: 2
 - [Astro CLI](/guides/astro-cli/)
 - [Orbit UI](/guides/orbit-ui/)
 - [Houston API](/guides/houston-api/)
+- [Grafana Dashboard](/guides/grafana-dashboard/)
 
 ## Usage
 
