@@ -5,7 +5,7 @@ permalink: /roadmap.html
 order: 3
 ---
 
-## Release 0.3 (~June 2018)
+## Release 0.3 (~July 2018)
 
 * CLI
   * Delete Airflow clusters
