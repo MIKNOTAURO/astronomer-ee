@@ -7,37 +7,15 @@ hide: true
 
 # Astronomer Platform dictionary
 
-## Objective
-
 Familiarize yourself with basic platform terminology. Some content may be duplicated across other guides but will contain more detail and context around the terms.
 
-### Astronomer Platform
-
-All of the __Astronomer core__ components and __deployment__ specific components which live on a Kubernetes cluster.
-
-### Astronomer Core
-
-The core applications that make up the __Astronomer Platform.__ There is only one instance of each component with a single Astronomer install.
-
-### Deployment Components
-
-The applications specific to a single Airflow __deployment__.
-
-### Platform Install
-
-A single installation of the __Astronomer Platform__. Will include the core components as well as __deployment components__ for each __deployment__ created on your cluster.
-
-### Astronomer Project
-
-An Airflow project directory containing dependency files. In most circumstances it is one to one with a production __deployment__.
-
-### Deployment
-
-A named Airflow cluster. Mapped to only a single __Astronomer project__.
-
-### Workspace
-
-Workspaces contain a group of Airflow Cluster __Deployments__.
+* __Astronomer Platform__ — All of the Astronomer Core and Deployment-Specific components which live on a Kubernetes cluster.
+* __Astronomer Core__ — The core applications that make up the Astronomer Platform. There is only one instance of each component with a single Astronomer install.
+* __Deployment Components__ — The applications specific to a single Airflow deployment.
+* __Platform Install__ — A single installation of the Astronomer Platform. Will include the core components as well as deployment components for each deployment created on your cluster.
+* __Astronomer Project__ — An Airflow project directory containing dependency files. In most circumstances it is one to one with a production deployment.
+* __Deployment__ - A named Airflow cluster. Mapped to only a single Astronomer project.
+* __Workspace__ - Workspaces contain a group of Airflow Cluster Deployments.
 
 ## Platform Components
 
