@@ -7,6 +7,8 @@ order: 2
 
 # Guides
 
+- [Platform Dictionary](/guides/platform-dictonary)
+
 ## Installation
 
 - [Prep: Install Helm](/guides/helm)
