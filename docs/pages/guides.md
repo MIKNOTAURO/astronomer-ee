@@ -7,7 +7,7 @@ order: 2
 
 # Guides
 
-- [Platform Dictionary](/guides/platform-dictonary)
+- [Platform Dictionary](/guides/platform-dictionary)
 
 ## Installation
 
