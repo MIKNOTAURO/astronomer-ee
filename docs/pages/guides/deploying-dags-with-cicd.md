@@ -36,13 +36,13 @@ recommend reading the article
   executed, you just need to run a few docker commands. A couple
   examples:
 
-  * https://circleci.com/docs/2.0/building-docker-images/
-  * https://documentation.codeship.com/pro/builds-and-configuration/image-registries/#custom--self-hosted-registry
+    * <https://circleci.com/docs/2.0/building-docker-images/>
+    * <https://documentation.codeship.com/pro/builds-and-configuration/image-registries/#custom--self-hosted-registry>
 
-  Images should be tagged with this format
-  registry.baseDomain/<release_name>/airflow:<version>, and the
-  user/password will be generated when the platform is initially
-  installed.
+    Images should be tagged with this format
+    `registry.baseDomain/<release_name>/airflow:<version>`, and the
+    user/password will be generated when the platform is initially
+    installed.
 
 NOTE: It's probably best to download the CLI in your CI build as
 the registry is currently password protected, and will eventually
@@ -53,7 +53,7 @@ astro auth login -d {domain}
 astro airflow deploy {release_name}
 ```
 
-Where {domain} is your base domain, and {release_name} is
+Where `{domain}` is your base domain, and `{release_name}` is
 your kubernetes release name. The CLI will handle the rest.
 
 [0]: https://www.digitalocean.com/community/tutorials/an-introduction-to-ci-cd-best-practices
