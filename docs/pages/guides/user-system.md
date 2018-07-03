@@ -18,4 +18,4 @@ users will be owners and have full control over the Airflow
 instances within.
 
 NOTE: Additional access control granularity will be introduced in
-0.4. Please reference the [RBAC Guide](/guides/rbac/)
+0.4. Please reference the [RBAC Guide](/guides/rbac/).
