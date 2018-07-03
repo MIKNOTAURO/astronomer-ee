@@ -23,12 +23,12 @@ order: 2
 
 ## Platform Features
 
-- [OAuth](/guides/oauth/)
-- [RBAC System](/guides/rbac/)
+- [User System](/guides/user-system/)
 - [Astro CLI](/guides/astro-cli/)
 - [Orbit UI](/guides/orbit-ui/)
 - [Houston API](/guides/houston-api/)
 - [Grafana Dashboard](/guides/grafana-dashboard/)
+- [RBAC System](/guides/rbac/)
 
 ## Usage
 
