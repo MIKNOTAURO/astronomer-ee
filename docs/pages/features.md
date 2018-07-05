@@ -35,9 +35,7 @@ to Kubernetes - but more importantly, to give Airflow developers a
 CLI to deploy DAGs through a private Docker registry that interacts
 with the Kubernetes API.
 
-Components that glue this all together include
-[Phoenix](https://github.com/astronomerio/phoenix) and
-[Commander](https://github.com/astronomerio/commander).
+[Commander](https://github.com/astronomerio/commander) glues this all together.
 
 ![Airflow Deployment]({{ "/assets/img/airflow_deployment.png" | absolute_url }})
 
