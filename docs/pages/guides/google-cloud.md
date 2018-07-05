@@ -17,15 +17,15 @@ In this guide, we assume you have a basic understanding of GCP concepts and term
 
 Initial requirements are:
 
-* A live [Kubernetes](https://kubernetes.io/){:target="_blank"} cluster with [Helm (Tiller)](https://github.com/kubernetes/helm){:target="_blank"} installed
+* A live [Kubernetes](https://kubernetes.io/)cluster with [Helm (Tiller)](https://github.com/kubernetes/helm) installed
 * Databases ([PostgreSQL & Redis](/guides/databases/index.html))
-* A clone of the [Astronomer Platform Helm charts](https://github.com/astronomerio/helm.astronomer.io){:target="_blank"}
+* A clone of the [Astronomer Platform Helm charts](https://github.com/astronomerio/helm.astronomer.io)
 * A webdomain you own
-* A DNS service. In this guide we'll use Google's [Cloud DNS](/guides/google-cloud-dns) 
+* A DNS service. In this guide we'll use Google's [Cloud DNS](/guides/google-cloud-dns)
 * [GCloud SDK installed](https://cloud.google.com/sdk/docs/quickstarts)
 * [Kubectl installed](/guides/kubectl/)
 
-If you don't have Kubernetes installed already, no fear, it's not too hard to [get Kubernetes Running](https://cloud.google.com/kubernetes-engine/docs/quickstart){:target="_blank"}. If you're just getting started, you can probably get away with a single node cluster, and increase the count over time. Think about how your workload might increase over time and choose a node size that makes sense for your plans. You can't change the node type after a cluster is already created, but you can add additional node pools that have different types of nodes.
+If you don't have Kubernetes installed already, no fear, it's not too hard to [get Kubernetes Running](https://cloud.google.com/kubernetes-engine/docs/quickstart). If you're just getting started, you can probably get away with a single node cluster, and increase the count over time. Think about how your workload might increase over time and choose a node size that makes sense for your plans. You can't change the node type after a cluster is already created, but you can add additional node pools that have different types of nodes.
 
 ### Support for Private Clusters (Beta)
 
@@ -33,7 +33,9 @@ Private clusters is currently a beta feature on Google Kubernetes Engine (GKE) t
 
 ## Permissions
 
-To complete this installation guide, you will need to have Kubernetes Admin and Compute Admin roles in GCP. You need permission to create a cluster, as well as provision a static IP address.
+To complete this installation guide, you will need to have Kubernetes Admin and
+Compute Admin roles in GCP. You need permission to create a cluster, as well as
+provision a static IP address.
 
 ## Pre setup
 We're going to set some local environment variables to ease the rest of the process
@@ -51,9 +53,11 @@ export PASSWORD=admin
 ```
 
 If you aren't sure about the `PROJECT_ID`, you can list your GCP projects with
+
 ```bash
 gcloud projects list
 ```
+
 ## Configuration File
 
 Once you have cloned the helm repository, change into that directory. The helm charts are built to be customizable and tailored to your unique environment. The way we customize an installation is through a YAML configuration file. This file can contain global configurations that are used in multiple charts, or chart specific configurations. Global configurations are underneath the top-level `global` key. Chart specific configurations will be nested under top-level keys that correspond to the chart name. For example, to override values in the `airflow` chart, you will need to create a top-level key, `airflow`, and nest configurations under it.
@@ -77,9 +81,9 @@ kubectl create namespace ${NAMESPACE}
 ## DNS
 
 By default, the Astronomer Platform will only be accessible from within the Kubernetes cluster.
-In a production environment, you'll most likely want to securely expose the various web interfaces to the internet 
-so your team can collaborate on the platform.To do this you'll probably want to assign the platform a domain name that 
-you own, so your users don't have to remember an IP address. On GCP, you can create a static IP address with the 
+In a production environment, you'll most likely want to securely expose the various web interfaces to the internet
+so your team can collaborate on the platform.To do this you'll probably want to assign the platform a domain name that
+you own, so your users don't have to remember an IP address. On GCP, you can create a static IP address with the
 following command:
 
 ```bash
@@ -111,7 +115,7 @@ In these docs, we make an assumption on the database name, but you are free to c
 WARNING: The examples here use the `--from-literal` option to demonstrate the format of the values, but you can just as easily create the secrets from txt files, using the `--from-file` option. This would look something like this: `kubectl create secret generic airflow-metadata --from-file connection=airflow-metadata.txt`, where the content of the `txt` file is the connection string. If you do use the `--from-literal` form, the secrets will most likely be hanging around in your shell's history, which could be a security concern.
 
 The following commands are using the default secret names specified in the root `values.yaml`.
-If you change the names, make sure you update your `config.yaml` file. 
+If you change the names, make sure you update your `config.yaml` file.
 These values are located under `airflow.data`.
 Also, don't forget to switch your `kubectl` default context to the namespace you created earlier, or specify the namespace with the `--namespace` flag.
 
@@ -153,7 +157,7 @@ You can name the secret whatever you want. Just make sure to update the `global.
 *Note: We highly recommend using a wildcard certificate for production usage.*
 <!-- markdownlint-enable MD036 -->
 
-If you do not already have a valid certificate, and do not want to purchase one, you can use the free service, [Let's Encrypt](https://letsencrypt.org/){:target="_blank"}. [Kube-lego](https://github.com/jetstack/kube-lego){:target="_blank"} is a project that you can deploy into your cluster that will take care of registering with Let's Encrypt and populating the secret with a TLS certificate for you. You can deploy it using the following command:
+If you do not already have a valid certificate, and do not want to purchase one, you can use the free service, [Let's Encrypt](https://letsencrypt.org/). [Kube-lego](https://github.com/jetstack/kube-lego) is a project that you can deploy into your cluster that will take care of registering with Let's Encrypt and populating the secret with a TLS certificate for you. You can deploy it using the following command:
 
 ```bash
 helm install \

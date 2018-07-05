@@ -35,9 +35,7 @@ to Kubernetes - but more importantly, to give Airflow developers a
 CLI to deploy DAGs through a private Docker registry that interacts
 with the Kubernetes API.
 
-Components that glue this all together include
-[Phoenix](https://github.com/astronomerio/phoenix) and
-[Commander](https://github.com/astronomerio/commander).
+[Commander](https://github.com/astronomerio/commander) glues this all together.
 
 ![Airflow Deployment]({{ "/assets/img/airflow_deployment.png" | absolute_url }})
 
@@ -47,23 +45,3 @@ Any Python packages can be added to `requirements.txt` and all OS level packages
 
 Additional [RUN](https://docs.docker.com/engine/reference/builder/#run
 ) commands can be added to the `Dockerfile`. Environment variables can also be added to [ENV](https://docs.docker.com/engine/reference/builder/#env).
-
-## Houston GraphQL API
-
-The [Houston GraphQL API](https://github.com/astronomerio/houston-api)
-is the source of truth for the Astronomer Platform.
-[Playground](https://houston.astronomer.win/playground).
-
-Queries:
-
-* Clusters - Fetches one or more deployments based on input
-* ClusterConfig - Fetches config needed to create a module deployment
-
-Mutations:
-
-* createToken - Verify a user's credentials and issues a token if valid
-* createUser - Creates a new user
-* updateUser - Update an existing user
-* createCluster - Creates a new Airflow Cluster
-* updateCluster - Updates an Airflow cluster
-* deleteCluster - Deletes an Airflow Cluster
