@@ -27,7 +27,6 @@ order: 2
 - [Astro CLI](/guides/astro-cli/)
 - [Orbit UI](/guides/orbit-ui/)
 - [Houston API](/guides/houston-api/)
-- [Grafana Dashboard](/guides/grafana-dashboard/)
 - [RBAC System](/guides/rbac/)
 
 ## Usage
@@ -37,6 +36,10 @@ order: 2
 - [Deploying DAGs with Astro CLI](/guides/deploying-dags-with-astro-cli/)
 - [Deploying DAGs with CI/CD](/guides/deploying-dags-with-cicd/)
 - [Migrating DAGs](/guides/migrating-dags)
+
+## Monitoring
+
+- [Monitoring](/guides/monitoring)
 
 ## Local Development
 
