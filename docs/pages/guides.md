@@ -13,6 +13,7 @@ order: 2
 
 - [User System](/guides/user-system/)
 - [Monitoring](/guides/monitoring/)
+- [Logs Handling](/guides/logs-handling/)
 - [Astro CLI](/guides/astro-cli/)
 - [Houston API](/guides/houston-api/)
 - [Orbit UI](/guides/orbit-ui/)
