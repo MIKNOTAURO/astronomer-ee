@@ -9,6 +9,15 @@ order: 2
 
 - [Platform Dictionary](/guides/platform-dictionary)
 
+## Platform Features
+
+- [User System](/guides/user-system/)
+- [Monitoring](/guides/monitoring/)
+- [Astro CLI](/guides/astro-cli/)
+- [Houston API](/guides/houston-api/)
+- [Orbit UI](/guides/orbit-ui/)
+- [RBAC System](/guides/rbac/)
+
 ## Installation
 
 - [Prep: Install Helm](/guides/helm)
@@ -21,14 +30,6 @@ order: 2
 
 - [Upgrade Astronomer](/guides/upgrade)
 
-## Platform Features
-
-- [User System](/guides/user-system/)
-- [Astro CLI](/guides/astro-cli/)
-- [Orbit UI](/guides/orbit-ui/)
-- [Houston API](/guides/houston-api/)
-- [RBAC System](/guides/rbac/)
-
 ## Usage
 
 - [Configuring Airflow](/guides/configuring-airflow)
@@ -36,10 +37,6 @@ order: 2
 - [Deploying DAGs with Astro CLI](/guides/deploying-dags-with-astro-cli/)
 - [Deploying DAGs with CI/CD](/guides/deploying-dags-with-cicd/)
 - [Migrating DAGs](/guides/migrating-dags)
-
-## Monitoring
-
-- [Monitoring](/guides/monitoring)
 
 ## Local Development
 
