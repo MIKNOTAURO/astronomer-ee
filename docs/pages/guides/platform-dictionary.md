@@ -23,6 +23,7 @@ Familiarize yourself with basic platform terminology. Some content may be duplic
 * __houston-api__ — A GraphQL API responsible for handling request from the user or user-level platform components (astro-cli, orbit-ui).
 * __commander__ — Handles gRPC requests from the houston-api in order to provision, update and delete Airflow deployments on the Astronomer Platform.
 * __orbit-ui__ — A webUI built on React. Provides a clean visual experience for users who will be administrating and monitoring the platform.
+* __db-bootstrapper__ - Utility to initialize databases and create Kubernetes secrets
 
 ## Airflow Components
 
